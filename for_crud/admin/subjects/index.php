@@ -113,17 +113,19 @@
 
                             <td>
                                 <a
-                                    href="subject_form.html"
+                                    href="edit.php?id=<?php echo$row['id']; ?>"
                                     class="btn btn-warning btn-sm"
                                 >
                                     Edit
                                 </a>
 
-                                <button
+                                <a
                                     class="btn btn-danger btn-sm"
+                                    href="delete.php?id=<?php echo $row['id']; ?>"
+                                    onclick="return confirm('Are you sure you want to delete this record?'  )"
                                 >
                                     Delete
-                                </button>
+                                </a>
                             </td>
                         </tr>
                         <?php } ?>
